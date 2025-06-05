@@ -8,6 +8,11 @@ list.addEventListener('click', (event) => {
   event.preventDefault();
 
   const listItem = event.target.closest('.list-item');
+
+  if (!listItem) {
+    return;
+  }
+
   const link = listItem.querySelector('.list-item__link');
 
   large.src = link.href;
